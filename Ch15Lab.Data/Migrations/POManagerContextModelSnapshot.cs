@@ -23,9 +23,6 @@ namespace Ch15Lab.Data.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("INTEGER");
 
-                    b.Property<int>("AddressTypeId")
-                        .HasColumnType("INTEGER");
-
                     b.Property<string>("City")
                         .IsRequired()
                         .HasColumnType("TEXT");
@@ -55,7 +52,6 @@ namespace Ch15Lab.Data.Migrations
                         new
                         {
                             AddressId = 10001,
-                            AddressTypeId = 91,
                             City = "Holland",
                             PostalCode = "49424",
                             StateId = 26,
@@ -65,7 +61,6 @@ namespace Ch15Lab.Data.Migrations
                         new
                         {
                             AddressId = 10002,
-                            AddressTypeId = 92,
                             City = "Holland",
                             PostalCode = "49424",
                             StateId = 26,
@@ -75,7 +70,6 @@ namespace Ch15Lab.Data.Migrations
                         new
                         {
                             AddressId = 10003,
-                            AddressTypeId = 93,
                             City = "Columbus",
                             PostalCode = "43229",
                             StateId = 39,

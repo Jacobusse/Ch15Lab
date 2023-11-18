@@ -7,8 +7,6 @@ public partial class Address
 {
     public int AddressId { get; set; }
 
-    public int AddressTypeId { get; set; }
-
     public string Title { get; set; } = null!;
 
     public string Street { get; set; } = null!;

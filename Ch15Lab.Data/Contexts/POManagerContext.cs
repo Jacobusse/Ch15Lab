@@ -51,9 +51,9 @@ public partial class POManagerContext : DbContext
 
             // Added type
             entity.HasData(
-                new Address() { AddressId = 10001, AddressTypeId = 91, Title = "Ox Exports Main Office", Street = "321 Fisrt Ave.", City = "Holland", StateId = 26, PostalCode = "49424" },
-                new Address() { AddressId = 10002, AddressTypeId = 92, Title = "Ox Exports Warehouse", Street = "123 Last Ln.", City = "Holland", StateId = 26, PostalCode = "49424" },
-                new Address() { AddressId = 10003, AddressTypeId = 93, Title = "Nicks Nacks Headquarters", Street = "987 Easy St.", City = "Columbus", StateId = 39, PostalCode = "43229" }
+                new Address() { AddressId = 10001, Title = "Ox Exports Main Office", Street = "321 Fisrt Ave.", City = "Holland", StateId = 26, PostalCode = "49424" },
+                new Address() { AddressId = 10002, Title = "Ox Exports Warehouse", Street = "123 Last Ln.", City = "Holland", StateId = 26, PostalCode = "49424" },
+                new Address() { AddressId = 10003, Title = "Nicks Nacks Headquarters", Street = "987 Easy St.", City = "Columbus", StateId = 39, PostalCode = "43229" }
             );
         });
 

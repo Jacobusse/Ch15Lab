@@ -27,7 +27,7 @@ public class PurchaseOrderRepo : IRepo<PurchaseOrder>
         }
         catch (Exception ex)
         {
-            _logger.LogError(ex, "PurchaseOrderReop::Add Exception");
+            _logger.LogError(ex, $"Add Purchase Order {entity.Number} Created Exception");
         }
 
         return null;
@@ -43,7 +43,6 @@ public class PurchaseOrderRepo : IRepo<PurchaseOrder>
         try
         {
             return _db.PurchaseOrders
-                .AsNoTracking()
                 .Include(po => po.BillingAddress)
                 .Include(po => po.ShippingAddress)
                 .Include(po => po.PurchaseOrderDetails)
@@ -52,7 +51,7 @@ public class PurchaseOrderRepo : IRepo<PurchaseOrder>
         }
         catch (Exception ex)
         {
-            _logger.LogError(ex, "PurchaseOrderReop::Get Exception");
+            _logger.LogError(ex, $"Get Purchase Order {id} Created Exception");
         }
 
         return null;
@@ -69,7 +68,7 @@ public class PurchaseOrderRepo : IRepo<PurchaseOrder>
         }
         catch (Exception ex)
         {
-            _logger.LogError(ex, "PurchaseOrderReop::Set Exception");
+            _logger.LogError(ex, $"Set Purchase Order {entity.Number} Created Exception");
         }
 
         return null;

@@ -11,7 +11,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Ch15Lab.Data.Migrations
 {
     [DbContext(typeof(POManagerContext))]
-    [Migration("20231118034541_InitialCreate")]
+    [Migration("20231118071638_InitialCreate")]
     partial class InitialCreate
     {
         /// <inheritdoc />
@@ -24,9 +24,6 @@ namespace Ch15Lab.Data.Migrations
                 {
                     b.Property<int>("AddressId")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("INTEGER");
-
-                    b.Property<int>("AddressTypeId")
                         .HasColumnType("INTEGER");
 
                     b.Property<string>("City")
@@ -58,7 +55,6 @@ namespace Ch15Lab.Data.Migrations
                         new
                         {
                             AddressId = 10001,
-                            AddressTypeId = 91,
                             City = "Holland",
                             PostalCode = "49424",
                             StateId = 26,
@@ -68,7 +64,6 @@ namespace Ch15Lab.Data.Migrations
                         new
                         {
                             AddressId = 10002,
-                            AddressTypeId = 92,
                             City = "Holland",
                             PostalCode = "49424",
                             StateId = 26,
@@ -78,7 +73,6 @@ namespace Ch15Lab.Data.Migrations
                         new
                         {
                             AddressId = 10003,
-                            AddressTypeId = 93,
                             City = "Columbus",
                             PostalCode = "43229",
                             StateId = 39,

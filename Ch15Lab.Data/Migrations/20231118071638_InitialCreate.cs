@@ -45,7 +45,6 @@ namespace Ch15Lab.Data.Migrations
                 {
                     AddressId = table.Column<int>(type: "INTEGER", nullable: false)
                         .Annotation("Sqlite:Autoincrement", true),
-                    AddressTypeId = table.Column<int>(type: "INTEGER", nullable: false),
                     Title = table.Column<string>(type: "TEXT", nullable: false),
                     Street = table.Column<string>(type: "TEXT", nullable: false),
                     City = table.Column<string>(type: "TEXT", nullable: false),
@@ -215,12 +214,12 @@ namespace Ch15Lab.Data.Migrations
 
             migrationBuilder.InsertData(
                 table: "Address",
-                columns: new[] { "AddressId", "AddressTypeId", "City", "PostalCode", "StateId", "Street", "Title" },
+                columns: new[] { "AddressId", "City", "PostalCode", "StateId", "Street", "Title" },
                 values: new object[,]
                 {
-                    { 10001, 91, "Holland", "49424", 26, "321 Fisrt Ave.", "Ox Exports Main Office" },
-                    { 10002, 92, "Holland", "49424", 26, "123 Last Ln.", "Ox Exports Warehouse" },
-                    { 10003, 93, "Columbus", "43229", 39, "987 Easy St.", "Nicks Nacks Headquarters" }
+                    { 10001, "Holland", "49424", 26, "321 Fisrt Ave.", "Ox Exports Main Office" },
+                    { 10002, "Holland", "49424", 26, "123 Last Ln.", "Ox Exports Warehouse" },
+                    { 10003, "Columbus", "43229", 39, "987 Easy St.", "Nicks Nacks Headquarters" }
                 });
 
             migrationBuilder.InsertData(
