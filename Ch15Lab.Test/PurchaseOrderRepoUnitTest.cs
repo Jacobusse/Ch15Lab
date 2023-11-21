@@ -120,7 +120,7 @@ public class PurchaseOrderRepoUnitTest
 
         Assert.NotNull(poNew);
         Assert.Equal("NN6003", poNew.Number);
-        Assert.NotEqual(holdTitle + " Edited", poNew.ShippingAddress?.Title);
+        Assert.Equal(holdTitle + " Edited", poNew.ShippingAddress?.Title);
         Assert.Equal(1, po.PurchaseOrderDetails?.Count());
         Assert.Equal("Ox Imports", po.Customer?.Name);
     }

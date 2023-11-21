@@ -18,10 +18,10 @@ public partial class POManagerContext : DbContext
     public virtual DbSet<State> States { get; set; }
     public virtual DbSet<Vendor> Vendors { get; set; }
 
-    protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-    {
-        optionsBuilder.UseSqlite("Data Source=.\\POManager.db");
-    }
+//    protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+//    {
+//        optionsBuilder.UseSqlite("Data Source=.\\POManager.db");
+//    }
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
